@@ -1,0 +1,34 @@
+/* styles.scss */
+
+.light-button {
+    background-color: #ff0000; /* Red background in light mode */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .dark-button {
+    background-color: #800080; /* Purple background in dark mode */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  h4{
+    color:#697C9A;
+font-size: 13px;
+font-weight: 700;
+line-height: 19px;
+letter-spacing: 2.5px;
+text-align: right;
+margin: 0;
+margin-right: 16px;
+
+  }
+  .hed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }

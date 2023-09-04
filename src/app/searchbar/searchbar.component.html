@@ -1,0 +1,15 @@
+<div class="searchBar" [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'">
+  <div class="d-flex container-fluid" style="gap: 24px">
+    <img src="/assets/images/loopa.svg" alt="" />
+    <p *ngIf="message">No Results</p>
+    <input
+      class="container-fluid"
+      [ngClass]="isDarkMode ? 'bg-dark' : 'bg-light'"
+      type="text"
+      placeholder="Search GitHub username…"
+      [(ngModel)]="userName"
+      (keyup.Enter)="search()"
+    />
+  </div>
+  <button type="button" (click)="search()">Search</button>
+</div>

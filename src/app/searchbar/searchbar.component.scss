@@ -1,0 +1,56 @@
+@import '/src/styles.scss';
+
+.d-flex{
+    display: flex;
+}
+
+button{
+color: #FFF;
+font-size: 16px;
+font-weight: 700;
+line-height: normal;
+border-radius: 10px;
+background: #0079FF;
+border:none;
+width: 106px;
+height: 50px;
+cursor: pointer;
+
+}
+p{
+color: #F74646;
+font-family: Space Mono;
+position: absolute;
+right: 140px;
+top: 28px;
+font-size: 15px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.searchBar{
+    position: relative;
+    margin-top: 36px;
+    padding-left: 32px;
+    padding-right: 10px;
+width: 730px;
+height: 69px;
+flex-shrink: 0;
+border-radius: 15px;
+background: #FEFEFE;
+box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.20);
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+input{
+display: block;
+outline: none;
+border: none;
+color: #4B6A9B;
+background-color:#FEFEFE ;
+font-size: 18px;
+font-weight: 400;
+line-height: 25px; /* 138.889% */
+}
