@@ -7,9 +7,11 @@ export interface UserProps {
   name: string;
   login?: string;
   bio?: string;
+  company?: string;
   public_repos?: number;
   created_at?: string;
   followers?: number;
+  twitter_username?: string;
   following?: number;
   location?: string;
   blog?: string;
@@ -31,6 +33,8 @@ export class AppComponent implements OnInit {
     login: "",
     name: "",
     bio: "",
+    twitter_username: "",
+    company: "",
     public_repos: 0,
     created_at: "",
     followers: 0,
@@ -59,22 +63,19 @@ export class AppComponent implements OnInit {
     const apiUrl: string = `https://api.github.com/users/${this.term}`;
 
 
-    try {
-      // Make the API request and await the response
-      this.http.get<UserProps>(apiUrl).subscribe(
-        (res: UserProps) => {
-          // Handle successful response here
-          this.userData = res;
-        },
-        (error) => {
-          // Handle API request error here
-          this.errorMsg = true;
-        }
-      );
-    } catch (error) {
-      // Handle synchronous errors here
-      this.errorMsg = true;
-    }
+    // Make the API request and await the response
+    this.http.get<UserProps>(apiUrl).subscribe(
+      (res: UserProps) => {
+        // Handle successful response here
+        this.userData = res;
+        this.errorMsg = false;
+      },
+      (error) => {
+        this.errorMsg = true;
+
+      }
+    );
+
   }
   switchTheme() {
     const bodyClasses = window.document.body.classList;

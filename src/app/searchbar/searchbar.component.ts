@@ -15,7 +15,7 @@ export class SearchbarComponent {
 
   search() {
     this.searchEmmiter.emit(this.userName)
-    console.log(this.userName);
+
   }
 
 }
