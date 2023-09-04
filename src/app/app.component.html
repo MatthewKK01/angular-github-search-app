@@ -64,19 +64,38 @@
       <h3 class="results">{{ userData.following }}</h3>
       <h3 class="results">{{ userData.followers }}</h3>
     </div>
-    <div>
+    <div class="socials">
       <div class="d-flex social">
-        <img src="/assets/images/twitter.svg" alt="" />
-        <p>{{ userData.twitter_username }} Not Available</p>
+        <img src="/assets/images/pin.svg" alt="" />
+        <p>{{ userData.location }}</p>
+      </div>
+      <div class="d-flex social">
+        <img
+          [ngStyle]="{
+            filter: userData.twitter_username ? 'none' : 'grayscale(100%)'
+          }"
+          src="/assets/images/twitter.svg"
+          alt=""
+        />
+        <p
+          [ngStyle]="{ color: userData.twitter_username ? '#4B6A9B' : 'gray' }"
+        >
+          {{
+            userData.twitter_username
+              ? userData.twitter_username
+              : "Not Available"
+          }}
+        </p>
       </div>
 
       <div class="d-flex social">
         <img src="/assets/images/url.svg" alt="" />
-        <a href="https://medium.com/@mateyavelashvili">{{ userData.blog }}</a>
-      </div>
-      <div class="d-flex social">
-        <img src="/assets/images/pin.svg" alt="" />
-        <p>{{ userData.location }}</p>
+        <a
+          class="line-clamp-1"
+          [ngStyle]="{ color: isDarkMode ? '#FFFFFF' : '#4B6A9B' }"
+          href="https://medium.com/@mateyavelashvili"
+          >{{ userData.blog }}</a
+        >
       </div>
 
       <div class="d-flex social">
